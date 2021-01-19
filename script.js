@@ -20,24 +20,19 @@ $rightNow.html(rightNow);
 console.log($moment);
 function print () {
     $textInput.each(function(){
-        $dataValue = $(this).attr('data-value');
-        parseInt($dataValue);
+        $dataValue = parseInt($(this).attr('data-value'));
     
-        $moment = moment().format('H');
-        parseInt($moment);
-        
-        
+       
         if ($dataValue > $moment) {
             $(this).addClass('future');
         } else if ($dataValue < $moment) {
             $(this).addClass('past');
-        } else {
-            $(this).addClass('present');
-        };
+                } else {
+                    $(this).addClass('present');
+                };
+
         console.log($textInput.attr('class'));  
     });
-
-
 };
 
 print();
