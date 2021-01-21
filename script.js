@@ -35,9 +35,19 @@ function colorCode () {
 };
 
 $saveBtn.on('click', function(){
-    $textSave = $(this).parent().prev().firstChild;
+    
+    $textSave = $(this).parent().prev().find('textarea').val();
     console.log($textSave);
-})
+    localStorage.setItem('enter', JSON.stringify($textSave));
+    $textStorage = JSON.stringify(localStorage.getItem('enter'));
+    console.log($textStorage);
+    
+    
+    
+    // $savedText = $(this).parent().prev().find('textarea').val($textStorage);
+    // console.log($savedText);
+
+});
 
 
 colorCode();
