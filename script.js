@@ -17,12 +17,11 @@ $moment = moment().format('H');
 var rightNow = moment().format('LL');
 //place current date in jumbotron
 $rightNow.html(rightNow);
-console.log($moment);
-function print () {
+// console.log($moment);
+function colorCode () {
     $textInput.each(function(){
         $dataValue = parseInt($(this).attr('data-value'));
-    
-       
+
         if ($dataValue > $moment) {
             $(this).addClass('future');
         } else if ($dataValue < $moment) {
@@ -31,11 +30,17 @@ function print () {
                     $(this).addClass('present');
                 };
 
-        console.log($textInput.attr('class'));  
+        // console.log($textInput.attr('class'));  
     });
 };
 
-print();
+$saveBtn.on('click', function(){
+    $textSave = $(this).parent().prev().firstChild;
+    console.log($textSave);
+})
+
+
+colorCode();
 
 
 // console.log(moment().format('LTS'));
