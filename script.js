@@ -1,16 +1,6 @@
 
 $rightNow = $('#currentDay');
 $allTimeBlocks = $('.time-block');
-$nine = $('#9');
-$ten = $('#10');
-$eleven = $('#11');
-$noon = $('#12');
-$one = $('#1');
-$two = $('#2');
-$three = $('#3');
-$four = $('#4');
-$five = $('#5');
-$textid5 = $('#five')
 $saveBtn = $('.saveBtn');
 $textInput = $('textarea');
 $moment = moment().format('H');
@@ -33,22 +23,38 @@ function colorCode () {
         // console.log($textInput.attr('class'));  
     });
 };
+function reload () {
+    $textInput.each(function() {
+        $timeofEvent = $(this).parent().attr("id");
+        $event = localStorage.getItem($timeofEvent);
+        // console.log($textSave);
+        // console.log($activities);
+
+        if ($event !== null) {
+            $(this).val($event);
+        };
+        console.log($event);
+
+    });
+};
+
+reload();
 
 $saveBtn.on('click', function(){
-    
+    $timeofEvent = $(this).parent().attr("id");
     $textSave = $(this).parent().prev().find('textarea').val();
-    console.log($textSave);
-    localStorage.setItem('enter', JSON.stringify($textSave));
-    $textStorage = JSON.stringify(localStorage.getItem('enter'));
-    console.log($textStorage);
+    localStorage.setItem($timeofEvent, JSON.stringify($textSave));
     
+    // console.log(localStorage);
     
+    // $textSave = $(this).parent().prev().find('textarea').val($textStorage)
     
+    // console.log($textSave);
     // $savedText = $(this).parent().prev().find('textarea').val($textStorage);
     // console.log($savedText);
 
 });
-
+console.log(localStorage);
 
 colorCode();
 
