@@ -43,63 +43,38 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+## Criteria Met
+
+```
+The Planner was created
+When the planner was opened
+Then the current day is displayed at the top of the calendar
+When the user scrolls down
+Then they are presented with time blocks for standard work day
+When the user views each time block
+Then each time block is color-coded to indicate whether it is in the past, present, or future
+When the time block is clicked
+Then the user can enter an event
+When the save button is clicked for that block
+Then the text is saved in local storage
+When the page is refreshed
+Then the saved events persist
+```
+
+## Issues 
+```
+I ran into very few issues, considering we had to build the javascript up completely and then modify our index in order to match the given stylesheet.
+
+The main issue I ran into in this step was properly naming the classes and id's in order to make them memorable and readable to assign events and changes to later on in the week as my code progressed.
+
+The color coding block actually came pretty naturally because of what we covered in class.  I also frequently relied upon the textbooks we were encouraged to check out for this bootcamp.  The textbook is called **Javascript & Jquery** *interactive front-end web development* by Jon Duckett.
+
+Where I had some issues was when I began introducing the storage logic.  Having not used much of it there was a lot of trial and error and visits to the BCS help button.  Eventually I was able to traverse the dom and set storage where it needed to be
+
+Another issue I had also had to do with the reload function.  I ran into a problem of which selector to use, a given id, or the data-value which I had assigned.  After much trial and error I resolved it by using data-value entry.  It was also nice to implement the each() methods in order to cycle through my selections without having to use a wordy for loop.  This brought about some challenges as to how to properly use the $(this).
+```
+## Links
 
 
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
 
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
