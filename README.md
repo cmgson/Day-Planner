@@ -1,16 +1,16 @@
 # 05 Third-Party APIs: Work Day Scheduler
-
+---
 ![Image of Day Planner](Assets/screenshot.png)
 
 ## Your Task
-
+---
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers.
 
 
 ## User Story
-
+---
 ```
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
@@ -19,7 +19,7 @@ SO THAT I can manage my time effectively
 
 
 ## Acceptance Criteria
-
+---
 ```
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
@@ -36,7 +36,7 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 ## Criteria Met
-
+---
 ```
 The Planner was created
 When the planner was opened
@@ -54,7 +54,7 @@ Then the saved events persist
 ```
 
 ## Issues 
-```
+---
 I ran into very few issues, considering we had to build the javascript up completely and then modify our index in order to match the given stylesheet.
 
 The main issue I ran into in this step was properly naming the classes and id's in order to make them memorable and readable to assign events and changes to later on in the week as my code progressed.
@@ -64,9 +64,9 @@ The color coding block actually came pretty naturally because of what we covered
 Where I had some issues was when I began introducing the storage logic.  Having not used much of it there was a lot of trial and error and visits to the BCS help button.  Eventually I was able to traverse the dom and set storage where it needed to be
 
 Another issue I had also had to do with the reload function.  I ran into a problem of which selector to use, a given id, or the data-value which I had assigned.  After much trial and error I resolved it by using data-value entry.  It was also nice to implement the each() methods in order to cycle through my selections without having to use a wordy for loop.  This brought about some challenges as to how to properly use the $(this).
-```
-## Links
 
+## Links
+---
 ### Github Repo
 https://github.com/cmgson/Day-Planner
 ### Deployed Page
