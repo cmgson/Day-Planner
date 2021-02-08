@@ -52,6 +52,10 @@ Then the text is saved in local storage
 When the page is refreshed
 Then the saved events persist
 ```
+## In Action
+---
+![GIF of Dayplanner](Assets/dayplanner_gif.gif)
+
 ## Technologies Used
 ---
 1.  HTML
