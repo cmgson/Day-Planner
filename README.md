@@ -52,6 +52,13 @@ Then the text is saved in local storage
 When the page is refreshed
 Then the saved events persist
 ```
+## Technologies Used
+---
+1.  HTML
+2.  Javascript
+3.  Bootstrap
+4.  MomentJS
+5.  Jquery
 
 ## Issues 
 ---
