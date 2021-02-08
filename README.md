@@ -59,6 +59,9 @@ Then the saved events persist
 3.  Bootstrap
 4.  MomentJS
 5.  Jquery
+6.  CSS
+7.  GoogleApis Fonts
+8.  Font Awesome
 
 ## Issues 
 ---
